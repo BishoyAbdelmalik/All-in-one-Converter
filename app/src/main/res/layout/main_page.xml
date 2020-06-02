@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="@string/Temperature_Button"
+                android:textColor="#ffffffff"
+                android:textSize="32.0sp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/tempBtn"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/button"
+                android:text="@string/Mass_Button"
+                android:textColor="#ffffffff"
+                android:textSize="32.0sp"
+                android:layout_marginBottom="1dp"
+                android:layout_below="@+id/tempBtn"
+                android:id="@+id/massBtn"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/button"
+                android:text="@string/Length_Button"
+                android:textColor="#ffffffff"
+                android:textSize="32.0sp"
+                android:layout_marginBottom="1dp"
+                android:layout_below="@+id/massBtn"
+                android:id="@+id/lengthBtn"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/button"
+                android:text="@string/Volume_button"
+                android:textColor="#ffffffff"
+                android:textSize="32.0sp"
+                android:layout_marginBottom="1dp"
+                android:layout_below="@+id/lengthBtn"
+                android:id="@+id/volumeBtn"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/button"
+                android:text="@string/Area_Button"
+                android:textColor="#ffffffff"
+                android:textSize="32.0sp"
+                android:layout_marginBottom="1dp"
+                android:layout_below="@+id/volumeBtn"
+                android:id="@+id/areaBtn"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/button"
+                android:text="@string/Speed_Button"
+                android:textColor="#ffffffff"
+                android:textSize="32.0sp"
+                android:layout_marginBottom="1dp"
+                android:layout_below="@+id/areaBtn"
+                android:id="@+id/speedBtn"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/button"
+                android:text="@string/Time_Button"
+                android:textColor="#ffffffff"
+                android:textSize="32.0sp"
+                android:layout_marginBottom="1dp"
+                android:layout_below="@+id/speedBtn"
+                android:id="@+id/timeBtn"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/button"
+                android:text="@string/Digital_Storage_Button"
+                android:textColor="#ffffffff"
+                android:textSize="32.0sp"
+                android:layout_marginBottom="1dp"
+                android:layout_below="@+id/timeBtn"
+                android:id="@+id/digitalStorageBtn"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

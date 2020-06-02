@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="apps.bishoya.allinoneunitconverter">
+    <application android:allowBackup="true" android:icon="@mipmap/app_logo" android:label="@string/app_name" android:theme="@style/AppTheme" android:versionCode="1" android:versionName="@string/VersionName">
+        <activity android:label="@string/app_name" android:name="apps.bishoya.allinoneunitconverter.coming_soon" android:parentActivityName="apps.bishoya.allinoneunitconverter.Main_Page" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="apps.bishoya.allinoneunitconverter.Main_Page"/>
+        </activity>
+        <activity android:label="@string/app_name" android:name="startScreen" android:screenOrientation="portrait" android:theme="@style/start_screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="Main_Page" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="Temperature" android:parentActivityName="Main_Page" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="Main_Page"/>
+        </activity>
+        <activity android:label="@string/app_name" android:name="Mass" android:parentActivityName="Main_Page" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="apps.bishoya.allinoneunitconverter.Main_Page"/>
+        </activity>
+        <activity android:label="@string/app_name" android:name="Length" android:parentActivityName="Main_Page" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="Main_Page"/>
+        </activity>
+    </application>
+</manifest>

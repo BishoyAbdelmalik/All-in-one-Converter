@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100.0dip"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/out"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in"
+        android:layout_alignEnd="@id/imageButton"
+        android:layout_alignRight="@id/imageButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="50.0dip"
+        android:ems="10"
+        android:enabled="true"
+        android:focusable="false"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="70.0dip"
+        android:layout_height="40.0dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5.0dip"
+        android:background="@drawable/arrow" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="229.0dip"
+        android:layout_marginLeft="229.0dip"
+        android:prompt="@string/Choose"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/spinner2"
+        android:layout_alignRight="@+id/spinner2"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="202.0dip"
+        android:layout_marginRight="202.0dip"
+        android:prompt="@string/Choose"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/in"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="40.0dip"
+        android:text="@string/In_Text"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/Out_Text"
+        android:textAppearance="?android:textAppearanceMedium" />
+</RelativeLayout>
