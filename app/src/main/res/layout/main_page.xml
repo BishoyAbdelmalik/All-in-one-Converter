@@ -68,18 +68,7 @@
                 android:layout_below="@+id/volumeBtn"
                 android:id="@+id/areaBtn"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30.0dip"
-                android:background="@drawable/button"
-                android:text="@string/Speed_Button"
-                android:textColor="#ffffffff"
-                android:textSize="32.0sp"
-                android:layout_marginBottom="1dp"
-                android:layout_below="@+id/areaBtn"
-                android:id="@+id/speedBtn"/>
+
 
             <Button
                 android:layout_width="match_parent"
@@ -91,7 +80,7 @@
                 android:textColor="#ffffffff"
                 android:textSize="32.0sp"
                 android:layout_marginBottom="1dp"
-                android:layout_below="@+id/speedBtn"
+                android:layout_below="@+id/areaBtn"
                 android:id="@+id/timeBtn"/>
 
             <Button

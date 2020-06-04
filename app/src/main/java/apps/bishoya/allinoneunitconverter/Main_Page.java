@@ -18,7 +18,6 @@ public class Main_Page extends AppCompatActivity {
         final Button digitalStorageBtn = (Button)this.findViewById(R.id.digitalStorageBtn);
         final Button lengthBtn = (Button)this.findViewById(R.id.lengthBtn);
         final Button massBtn = (Button)this.findViewById(R.id.massBtn);
-        final Button speedBtn = (Button)this.findViewById(R.id.speedBtn);
         final Button timeBtn = (Button)this.findViewById(R.id.timeBtn);
         final Button volumeBtn = (Button)this.findViewById(R.id.volumeBtn);
         tempBtn.setOnClickListener(new OnClickListener() {
@@ -40,6 +39,13 @@ public class Main_Page extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Main_Page.this.getApplicationContext(),Length.class));
+                overridePendingTransition(R.anim.in, R.anim.out);
+            }
+        });
+        volumeBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Main_Page.this.getApplicationContext(),Volume.class));
                 overridePendingTransition(R.anim.in, R.anim.out);
             }
         });

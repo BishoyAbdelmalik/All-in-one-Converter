@@ -9,13 +9,10 @@
     <string name="Length_Button">Length</string>
     <string name="Mass_Button">Mass</string>
     <string name="Out_Text">Output Below:</string>
-    <string name="Speed_Button">Speed</string>
     <string name="Temperature_Button">Temperature</string>
     <string name="Time_Button">Time</string>
     <string name="VersionName">1.0</string>
     <string name="Volume_button">Volume</string>
-    <string name="abc_search_hint">Search…</string>
-    <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Settings</string>
     <string name="action_settings_Units">Help</string>
     <string name="app_name">All in one Converter</string>
