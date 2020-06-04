@@ -64,23 +64,30 @@ public class Mass  extends converter {
 
     private int getUnit(String unit) throws Exception {
         int returnValue;
-        if (unit.equals("Metric ton")){
-            returnValue=MT;
-        }else if (unit.equals("Kilogram")){
-            returnValue=KG;
-        }else if (unit.equals("Gram")){
-            returnValue=G;
-        }else if (unit.equals("Milligram")){
-            returnValue=MilliG;
-        }else if (unit.equals("Microgram")){
-            returnValue=MicroG;
-        }else if (unit.equals("Pound")){
-            returnValue=Ib;
-        }else if (unit.equals("Ounce")){
-            returnValue=Oz;
-        }
-        else{
-            throw new Exception();
+        switch (unit) {
+            case "Metric ton":
+                returnValue = MT;
+                break;
+            case "Kilogram":
+                returnValue = KG;
+                break;
+            case "Gram":
+                returnValue = G;
+                break;
+            case "Milligram":
+                returnValue = MilliG;
+                break;
+            case "Microgram":
+                returnValue = MicroG;
+                break;
+            case "Pound":
+                returnValue = Ib;
+                break;
+            case "Ounce":
+                returnValue = Oz;
+                break;
+            default:
+                throw new Exception();
         }
         return returnValue;
     }

@@ -71,29 +71,39 @@ public class Length extends converter {
 
     private int getUnit(String unit) throws Exception {
         int returnValue;
-        if (unit.equals("Kilometer")){
-            returnValue=KM;
-        }else if (unit.equals("Meter")){
-            returnValue=M;
-        }else if (unit.equals("Centimeter")){
-            returnValue=CM;
-        }else if (unit.equals("Millimeter")){
-            returnValue=MilliM;
-        }else if (unit.equals("Micrometer")){
-            returnValue=MicroM;
-        }else if (unit.equals("Nanometer")){
-            returnValue=NanoM;
-        }else if (unit.equals("Mile")){
-            returnValue=Mile;
-        }else if (unit.equals("Yard")){
-            returnValue=Yard;
-        }else if (unit.equals("Foot")){
-            returnValue=Foot;
-        }else if (unit.equals("Inch")){
-            returnValue=In;
-        }
-        else{
-            throw new Exception();
+        switch (unit) {
+            case "Kilometer":
+                returnValue = KM;
+                break;
+            case "Meter":
+                returnValue = M;
+                break;
+            case "Centimeter":
+                returnValue = CM;
+                break;
+            case "Millimeter":
+                returnValue = MilliM;
+                break;
+            case "Micrometer":
+                returnValue = MicroM;
+                break;
+            case "Nanometer":
+                returnValue = NanoM;
+                break;
+            case "Mile":
+                returnValue = Mile;
+                break;
+            case "Yard":
+                returnValue = Yard;
+                break;
+            case "Foot":
+                returnValue = Foot;
+                break;
+            case "Inch":
+                returnValue = In;
+                break;
+            default:
+                throw new Exception();
         }
         return returnValue;
     }

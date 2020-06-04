@@ -62,17 +62,21 @@ public class Volume extends converter {
 
     private int getUnit(String unit) throws Exception {
         int returnValue;
-        if (unit.equals("Cubic meter")){
-            returnValue=M3;
-        }else if (unit.equals("Liter")){
-            returnValue=L;
-        }else if (unit.equals("Milliliter")){
-            returnValue=ML;
-        }else if (unit.equals("Imperial gallon")){
-            returnValue=G;
-        }
-        else{
-            throw new Exception();
+        switch (unit) {
+            case "Cubic meter":
+                returnValue = M3;
+                break;
+            case "Liter":
+                returnValue = L;
+                break;
+            case "Milliliter":
+                returnValue = ML;
+                break;
+            case "Imperial gallon":
+                returnValue = G;
+                break;
+            default:
+                throw new Exception();
         }
         return returnValue;
     }

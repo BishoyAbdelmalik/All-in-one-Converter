@@ -100,14 +100,18 @@ public class Temperature  extends converter {
 
     private int getUnit(String unit) throws Exception {
         int returnValue;
-        if (unit.equals("Celsius")){
-            returnValue=C;
-        }else if (unit.equals("Fahrenheit")){
-            returnValue=F;
-        }else if (unit.equals("Kelvin")){
-            returnValue=K;
-        }else{
-            throw new Exception();
+        switch (unit) {
+            case "Celsius":
+                returnValue = C;
+                break;
+            case "Fahrenheit":
+                returnValue = F;
+                break;
+            case "Kelvin":
+                returnValue = K;
+                break;
+            default:
+                throw new Exception();
         }
         return returnValue;
     }
