@@ -32,6 +32,7 @@ public abstract class converter extends AppCompatActivity {
         outUnit=findViewById(R.id.spinner2);
         inUnit.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, s));
         outUnit.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, s));
+        outUnit.setSelection(1);
     }
     protected  void initializeGUI(){
         input=findViewById(R.id.in);
@@ -96,23 +97,15 @@ public abstract class converter extends AppCompatActivity {
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String outputUnit=getOutUnit();
-                String inputUnit=getInUnit();
-                inUnit.setSelection(getIndex(inUnit,outputUnit));
-                outUnit.setSelection(getIndex(inUnit,inputUnit));
+                int outputUnit=outUnit.getSelectedItemPosition();
+                int inputUnit=inUnit.getSelectedItemPosition();
+                inUnit.setSelection(outputUnit);
+                outUnit.setSelection(inputUnit);
             }
         });
 
     }
-    private int getIndex(Spinner spinner, String myString){
-        for (int i=0;i<spinner.getCount();i++){
-            if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(myString)){
-                return i;
-            }
-        }
 
-        return 0;
-    }
     protected  void setOutput(String s){
         output.setText(s);
     }
