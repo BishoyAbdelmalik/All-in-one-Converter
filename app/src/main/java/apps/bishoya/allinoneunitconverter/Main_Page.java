@@ -49,6 +49,27 @@ public class Main_Page extends AppCompatActivity {
                 overridePendingTransition(R.anim.in, R.anim.out);
             }
         });
+        areaBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Main_Page.this.getApplicationContext(),Area.class));
+                overridePendingTransition(R.anim.in, R.anim.out);
+            }
+        });
+        digitalStorageBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Main_Page.this.getApplicationContext(),DigitalStorage.class));
+                overridePendingTransition(R.anim.in, R.anim.out);
+            }
+        });
+        timeBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Main_Page.this.getApplicationContext(),Time.class));
+                overridePendingTransition(R.anim.in, R.anim.out);
+            }
+        });
 
     }
 }

@@ -19,5 +19,14 @@
         <activity android:label="@string/app_name" android:name="Volume" android:parentActivityName="Main_Page" android:screenOrientation="portrait">
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="apps.bishoya.allinoneunitconverter.Volume"/>
         </activity>
+        <activity android:label="@string/app_name" android:name="Area" android:parentActivityName="Main_Page" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="apps.bishoya.allinoneunitconverter.Area"/>
+        </activity>
+        <activity android:label="@string/app_name" android:name="Time" android:parentActivityName="Main_Page" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="apps.bishoya.allinoneunitconverter.Time"/>
+        </activity>
+        <activity android:label="@string/app_name" android:name="DigitalStorage" android:parentActivityName="Main_Page" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="apps.bishoya.allinoneunitconverter.DigitalStorage"/>
+        </activity>
     </application>
 </manifest>
