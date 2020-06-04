@@ -11,8 +11,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,8 +30,8 @@ public abstract class converter extends AppCompatActivity {
     protected void setSpinnerValues() {
         inUnit = findViewById(R.id.spinner);
         outUnit=findViewById(R.id.spinner2);
-        inUnit.setAdapter((SpinnerAdapter)new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, s));
-        outUnit.setAdapter((SpinnerAdapter)new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, s));
+        inUnit.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, s));
+        outUnit.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, s));
     }
     protected  void initializeGUI(){
         input=findViewById(R.id.in);
@@ -86,12 +86,32 @@ public abstract class converter extends AppCompatActivity {
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("conversion output", output.getText().toString());
                 clipboard.setPrimaryClip(clip);
+
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(getApplicationContext(), "Output copied to clipboard", duration);
                 toast.show();
             }
         });
+        ImageButton arrow =findViewById(R.id.imageButton);
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String outputUnit=getOutUnit();
+                String inputUnit=getInUnit();
+                inUnit.setSelection(getIndex(inUnit,outputUnit));
+                outUnit.setSelection(getIndex(inUnit,inputUnit));
+            }
+        });
 
+    }
+    private int getIndex(Spinner spinner, String myString){
+        for (int i=0;i<spinner.getCount();i++){
+            if (spinner.getItemAtPosition(i).toString().equalsIgnoreCase(myString)){
+                return i;
+            }
+        }
+
+        return 0;
     }
     protected  void setOutput(String s){
         output.setText(s);
